@@ -11,10 +11,42 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+const generateMarkdownContent  = (name, desc) => 
+
+`#Program Name is: ${name}, 
+##Description:
+  ${desc}
+  
+  
+  `;
+/*function generateMarkdown(data) {
   return `# ${data.title}
 
 `;
 }
+*/
+module.exports = generateMarkdownContent 
+/*
+=> {
+  // destructure page data by section
+  const { data } = readmeData;
+  console.log("readmeData= ", readmeData);
+  console.log("data= ", data);
 
-module.exports = generateMarkdown;
+  return `
+  # ${data.programName}
+  <br>
+  # ${data.description}
+
+  
+    "$generateAbout(about)}
+      $generateProjects(projects)}
+    </main>
+    <footer class="container text-center py-3">
+      <h3 class="text-dark">&copy; ${new Date().getFullYear()} </h3>
+    </footer>
+  </body>
+  </html>
+  `;
+};
+*/

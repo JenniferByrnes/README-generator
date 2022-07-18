@@ -88,7 +88,6 @@ const mockData =
 };
 
 const someContent = "some content"
-
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {
 //  fs.writeFileSync(fileName, generateMarkdown(data))
@@ -97,11 +96,33 @@ const someContent = "some content"
 
 
 // TODO: Create a function to initialize app
-promptUser();
+promptUser() 
+    // include handler and promise
+    .then((readmeInput) => {
 
-fs.writeFile('testme.md', generateMarkdown("stupid name", "stupid description"), err => {
-  if (err) throw err;
-
-  console.log('Whoop whoop writeFile!');
-});
+      //return generateMarkdown();
+      console.log(generateMarkdown(mockData.programName, mockData.description));
+      //console.log(generateMarkdown(mockData()));
+      
+      console.log(" after generateMarkdown");
+      //console.log("responses1=", readmeInput);
+      //console.log("responses1=", mockData);
+      return;
+    })
+    .then (console.log(generateMarkdown()));
+      // just writing to see if I can
+      // writeFile must have string - not object or array
+      try {
+        
+        fs.writeFile('testREADME.md', someContent, err => {
+          if (err) {
+            console.error(err);
+          }
+          // file written successfully
+          console.log('Whoop, whoop!  File written');
+        })
+      } catch (err) {
+        console.error(err);
+      }
+    
 
