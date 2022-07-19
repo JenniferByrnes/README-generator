@@ -1,3 +1,5 @@
+module.exports = inputData => { 
+  console.log(inputData);
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -11,21 +13,44 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-const generateMarkdownContent  = (name, desc) => 
+return`
+#Program Name is: ${inputData.programName}, 
+**********license badge*************
 
-`#Program Name is: ${name}, 
 ##Description:
-  ${desc}
-  
+  ${inputData.description}
+
+##Table of Contents
+
+##Installation
+${inputData.installInstructions}
+
+##Usage
+${inputData.usageInformation}
+
+##License
+${inputData.license}
+explaination...................
+
+##Contributing
+${inputData.contributionGuidelines}
+
+##Tests
+${inputData.testInstructions}
+
+##Questions
+GitHub profile: ${inputData.githubUserName}
+Please address any questions to me at ${inputData.emailAddress}
   
   `;
+}
 /*function generateMarkdown(data) {
   return `# ${data.title}
 
 `;
 }
 */
-module.exports = generateMarkdownContent 
+
 /*
 => {
   // destructure page data by section

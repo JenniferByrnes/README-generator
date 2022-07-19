@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
-// fs contains writeFileSync()
-const fs = require('fs');
+// Packages need for the application
 
 // inquirer contains prompt()
 const inquirer = require('inquirer');
+
+// fs contains writeFileSync()
+const fs = require('fs');
 
 //Next line might not be needed (tutor)
 //const { generate } = require('rxjs');
@@ -14,7 +15,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 
 
-// TODO: Create an array of questions for user input
+// An array of questions for user input
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -59,7 +60,7 @@ const promptUser = () => {
       type: 'list',
       name: 'license',
       message: 'Select the license that you used.',
-      choices: ['BSD', 'MIT', 'GPL', 'GNU GPLv3', 'Apache', 'Boost', 'Creative Commons']
+      choices: ['No license','BSD', 'MIT', 'GPL', 'GNU GPLv3', 'Apache', 'Boost', 'Creative Commons']
     },
     {
       type: "input",
@@ -96,12 +97,15 @@ const someContent = "some content"
 
 
 
-// TODO: Create a function to initialize app
-promptUser();
+// Function to initialize app
+promptUser()
+  .then( readmeData => {
+    //const pageREADME = generateMarkdown(readmeData);
+    console.log(generateMarkdown(mockData));
+  //  fs.writeFile('testme.md', generateMarkdown("Jenn Project name", "Jenn //project description"), err => {
+  //    if (err) throw new Error(err);
 
-fs.writeFile('testme.md', generateMarkdown("stupid name", "stupid description"), err => {
-  if (err) throw err;
-
-  console.log('Whoop whoop writeFile!');
+  //    console.log('Whoop whoop writeFile!');
+  //  });
 });
 
