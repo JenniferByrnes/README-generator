@@ -6,14 +6,8 @@ const inquirer = require('inquirer');
 // fs contains writeFileSync()
 const fs = require('fs');
 
-//Next line might not be needed (tutor)
-//const { generate } = require('rxjs');
-
-
 // This function is contained in the generateMarkdown file
 const generateMarkdown = require('./utils/generateMarkdown');
-
-
 
 // An array of questions for user input
 const promptUser = () => {
@@ -78,33 +72,25 @@ const promptUser = () => {
 const mockData =
 {
   programName: 'README-generator',
-  description: 'An amazing README generator.  It will knock your socks off!',
-  installInstructions: 'Press the red button',
-  usageInformation: 'then press the blue one',
-  contributionGuidelines: 'just slam the code in there.  its OK.',
-  testInstructions: 'dont bother testing - just wing it',
-  license: 'MIT',
+  description: 'Writes a high quality README.md file based on console input.',
+  installInstructions: 'Clone this repository and run index.js from the command line',
+  usageInformation: 'Run index.js from the command line',
+  contributionGuidelines: 'Fork the repository and do a pull request for your code to be reviewed.',
+  testInstructions: 'None',
+  license: 'BSD',
   githubUserName: 'jenniferbyrnes',
-  emailAddress: 'jennkb@comcast.net'
+  emailAddress: 'jennifer.byrnes@outlook.com'
 };
-
-
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {
-//  fs.writeFileSync(fileName, generateMarkdown(data))
-//}
-
-
 
 // Function to initialize app
 promptUser()
   .then( readmeData => {
-    //const pageREADME = generateMarkdown(readmeData);
+    //function to write README file
     //console.log(generateMarkdown(mockData));
-    fs.writeFile('testme.md', generateMarkdown(mockData), err => {
-      if (err) throw new Error(err);
-
-      console.log('Whoop whoop writeFile!');
+    fs.writeFile('./dist/README.md', generateMarkdown(mockData), err => {
+      if (err) throw new Error(err)
+      else
+      console.log('New README.md file is written successfully.');
     });
 });
 
