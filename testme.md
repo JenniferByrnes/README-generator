@@ -1,8 +1,6 @@
 
-#<README-generator>
-
-**********license badge*************
-<img width="928" alt="license badge" src="https://user-images.githubusercontent.com/105435313/176179770-61f0203b-98d3-47de-8df7-de1b89dbe1e1.png">
+# README-generator
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description:
 
@@ -14,6 +12,9 @@ An amazing README generator.  It will knock your socks off!
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [How to Contribute](#How-to-Contribute)
+- [Tests](#Tests)
+- [Questions?](#Questions?)
 
 ## Installation
 
@@ -25,8 +26,7 @@ then press the blue one
 
 ## License
 
-licensed under the https//GPL.com license
-explaination...................
+licensed under the [MIT](https//choosealicense.com/licenses/mit/) license
 
 ## How to Contribute
 
@@ -38,7 +38,7 @@ dont bother testing - just wing it
 
 ## Questions?
 
-GitHub profile: https://jenniferbyrnes.github
+GitHub profile: https://github.com/jenniferbyrnes
 
 Please address any questions to me at jennkb@comcast.net
   

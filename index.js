@@ -60,7 +60,7 @@ const promptUser = () => {
       type: 'list',
       name: 'license',
       message: 'Select the license that you used.',
-      choices: ['No license','BSD', 'MIT', 'GPL']
+      choices: ['No license','Apache-2.0', 'BSD', 'GPL-3.0', 'MIT']
     },
     {
       type: "input",
@@ -83,7 +83,7 @@ const mockData =
   usageInformation: 'then press the blue one',
   contributionGuidelines: 'just slam the code in there.  its OK.',
   testInstructions: 'dont bother testing - just wing it',
-  license: 'GPL',
+  license: 'MIT',
   githubUserName: 'jenniferbyrnes',
   emailAddress: 'jennkb@comcast.net'
 };
