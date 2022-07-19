@@ -34,61 +34,60 @@ const promptUser = () => {
     {
       type: "input",
       name: "description",
-      message: "Please, provide a description of your program (Required)"
+      message: "Please, provide a description of your program."
     },
     {
       type: "input",
       name: "installInstructions",
-      message: "Please, provide installation instructions for your program (Required)"
+      message: "Please, provide installation instructions for your program."
     },
     {
       type: "input",
       name: "usageInformation",
-      message: "Please, provide usage information for your program (Required)"
+      message: "Please, provide usage information for your program."
     },
     {
       type: "input",
       name: "contributionGuidelines",
-      message: "Please, provide contribution guidelines for your program (Required)"
+      message: "Please, provide contribution guidelines for your program."
     },
     {
       type: "input",
       name: "testInstructions",
-      message: "Please, provide test instructions for your program (Required)"
+      message: "Please, provide test instructions for your program."
     },
     {
       type: 'list',
       name: 'license',
       message: 'Select the license that you used.',
-      choices: ['No license','BSD', 'MIT', 'GPL', 'GNU GPLv3', 'Apache', 'Boost', 'Creative Commons']
+      choices: ['No license','BSD', 'MIT', 'GPL']
     },
     {
       type: "input",
       name: "githubUserName",
-      message: "Please, provide your github user name. (Required)"
+      message: "Please, provide your github user name."
     },
     {
       type: "input",
       name: "emailAddress",
-      message: "Please, provide your email address. (Required)"
+      message: "Please, provide your email address."
     }
   ])
 };
 
 const mockData =
 {
-  programName: 'Amazing Program',
-  description: 'It will knock your socks off!',
+  programName: 'README-generator',
+  description: 'An amazing README generator.  It will knock your socks off!',
   installInstructions: 'Press the red button',
   usageInformation: 'then press the blue one',
   contributionGuidelines: 'just slam the code in there.  its OK.',
   testInstructions: 'dont bother testing - just wing it',
-  license: 'BSD',
-  githubUserName: 'GithubUsername',
-  emailAddress: 'myEmailaddress@comcast.net'
+  license: 'GPL',
+  githubUserName: 'jenniferbyrnes',
+  emailAddress: 'jennkb@comcast.net'
 };
 
-const someContent = "some content"
 
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {
@@ -101,11 +100,11 @@ const someContent = "some content"
 promptUser()
   .then( readmeData => {
     //const pageREADME = generateMarkdown(readmeData);
-    console.log(generateMarkdown(mockData));
-  //  fs.writeFile('testme.md', generateMarkdown("Jenn Project name", "Jenn //project description"), err => {
-  //    if (err) throw new Error(err);
+    //console.log(generateMarkdown(mockData));
+    fs.writeFile('testme.md', generateMarkdown(mockData), err => {
+      if (err) throw new Error(err);
 
-  //    console.log('Whoop whoop writeFile!');
-  //  });
+      console.log('Whoop whoop writeFile!');
+    });
 });
 
