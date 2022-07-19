@@ -26,7 +26,7 @@ Run index.js from the command line
 
 ## License
 
-licensed under the [BSD](https//choosealicense.com/licenses/bsd/) license
+licensed under the [BSD](https://choosealicense.com/licenses/bsd/) license
 
 ## How to Contribute
 

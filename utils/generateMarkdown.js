@@ -27,7 +27,7 @@ module.exports = inputData => {
   function renderLicenseLink(license) {
     if (license !== 'No license') {
       lowerLicense = license.toLowerCase();
-      return `[${(license)}](https//choosealicense.com/licenses/${(lowerLicense)}/)`
+      return `[${(license)}](https://choosealicense.com/licenses/${(lowerLicense)}/)`
     } else {
       return ``
   }

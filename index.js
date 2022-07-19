@@ -69,25 +69,12 @@ const promptUser = () => {
   ])
 };
 
-const mockData =
-{
-  programName: 'README-generator',
-  description: 'Writes a high quality README.md file based on console input.',
-  installInstructions: 'Clone this repository and run index.js from the command line',
-  usageInformation: 'Run index.js from the command line',
-  contributionGuidelines: 'Fork the repository and do a pull request for your code to be reviewed.',
-  testInstructions: 'None',
-  license: 'BSD',
-  githubUserName: 'jenniferbyrnes',
-  emailAddress: 'jennifer.byrnes@outlook.com'
-};
-
 // Function to initialize app
 promptUser()
   .then( readmeData => {
     //function to write README file
     //console.log(generateMarkdown(mockData));
-    fs.writeFile('./dist/README.md', generateMarkdown(mockData), err => {
+    fs.writeFile('./dist/README.md', generateMarkdown(readmeData), err => {
       if (err) throw new Error(err)
       else
       console.log('New README.md file is written successfully.');
