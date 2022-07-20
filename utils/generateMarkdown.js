@@ -1,5 +1,5 @@
 module.exports = inputData => { 
-  //console.log(inputData);
+  console.log("inputData = ", inputData);
 
   // Function that returns a license badge based on which license is passed in
   // If there is no license, return an empty string
@@ -25,6 +25,7 @@ module.exports = inputData => {
   // Function that returns the license link
   // If there is no license, return an empty string
   function renderLicenseLink(license) {
+    console.log("license = ", license);
     if (license !== 'No license') {
       lowerLicense = license.toLowerCase();
       return `[${(license)}](https://choosealicense.com/licenses/${(lowerLicense)}/)`

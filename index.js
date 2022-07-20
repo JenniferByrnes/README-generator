@@ -69,15 +69,20 @@ const promptUser = () => {
   ])
 };
 
+// Function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFileSync(fileName, data), err => {
+  if (err) throw new Error(err);
+  else
+  console.log('New README.md file is written successfully.');
+}};
+
+
 // Function to initialize app
 promptUser()
   .then( readmeData => {
-    //function to write README file
-    //console.log(generateMarkdown(mockData));
-    fs.writeFile('./dist/README.md', generateMarkdown(readmeData), err => {
-      if (err) throw new Error(err)
-      else
-      console.log('New README.md file is written successfully.');
-    });
-});
+    writeToFile('./dist/README.md', generateMarkdown(readmeData)
+    )}
+  );
+
 
